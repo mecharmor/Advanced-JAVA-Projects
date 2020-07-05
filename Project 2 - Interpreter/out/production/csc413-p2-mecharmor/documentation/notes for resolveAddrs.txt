@@ -1,4 +1,0 @@
-I managed to use resolveAddress to resolve all the addresses in a single pass. This was accomplished by populating a HashMap (during the for each loop) that 
-verifies that the current ByteCode needs to be resolved and attempts to resolve it using the incomplete HashMap. If it fails then that ByteCode gets
-pushed to the stack to be resolved later. This process repeats but the efficient aspect of it is the actual usage of the incomplete HashMap while looping. 
-This decreases the amount of popping that needs to happen after the first pass is complete.
